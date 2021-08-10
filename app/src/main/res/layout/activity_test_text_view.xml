@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hearing.scrolltextview.textview.ScrollTextView
+        android:id="@+id/scrollTextView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:paddingHorizontal="20dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="start"
+            android:padding="2dp"
+            android:text="开始"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="pause"
+            android:padding="2dp"
+            android:text="暂停"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="fast"
+            android:padding="2dp"
+            android:text="加速"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="slow"
+            android:padding="2dp"
+            android:text="减速"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="large"
+            android:padding="2dp"
+            android:text="放大"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="3dp"
+            android:onClick="small"
+            android:padding="2dp"
+            android:text="缩小"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>
