@@ -9,6 +9,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:onClick="toRecycler"
+        android:text="自定义Recycler实现"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
         android:onClick="toView"
         android:text="自定义View实现"
         tools:ignore="HardcodedText" />

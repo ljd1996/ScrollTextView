@@ -37,7 +37,8 @@ class ScrollView @JvmOverloads constructor(
     private var currentLine = 0
     private var isUserScroll = false
     private var lineSpace = SizeUtils.dp2px(context, 15f)   // 向下行距，单位 dp
-    var highLightCount = 2  // 默认高亮 2 行
+    var highLightCount = 1  // 默认高亮 1 行
+    var highLightStart = 1  // 默认从第1行开始高亮
     var isSmoothness = true // 默认平滑滚动
 
     @ColorInt
@@ -232,7 +233,7 @@ class ScrollView @JvmOverloads constructor(
      */
     private fun isHighLightLine(line: Int): Boolean {
         for (i in 0 until highLightCount) {
-            if (currentLine + i == line) {
+            if (currentLine + i == line - highLightStart) {
                 return true
             }
         }

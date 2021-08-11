@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hearing.scrolltextview.view.ScrollView
-        android:id="@+id/scrollView"
+    <com.hearing.scrolltextview.recycler.ScrollRecyclerView
+        android:id="@+id/scrollRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="center"

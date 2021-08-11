@@ -3,28 +3,17 @@ package com.hearing.scrolltextview.test
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.hearing.scrolltextview.R
-import com.hearing.scrolltextview.utils.SizeUtils
-import kotlinx.android.synthetic.main.activity_test_view.scrollView
+import kotlinx.android.synthetic.main.activity_test_recycler.scrollRecyclerView
 
 /**
  * @Author: 苍耳叔叔
  * @Date: 2021/8/10
  */
-class TestViewActivity : AppCompatActivity() {
+class TestRecyclerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test_view)
-        testLinesView()
-    }
-
-    private fun testLinesView() {
-        val singleWidth = SizeUtils.dp2px(this, 20f)
-        val width = SizeUtils.dp2px(this, 320f)
-        val count = (width / singleWidth).toInt()
-        var start = -count
-        var end = 0
-        scrollView.setData(TEXT.split("\n"))
-        scrollView.start()
+        setContentView(R.layout.activity_test_recycler)
+        scrollRecyclerView.setStrData(TEXT.split("\n"))
     }
 
     companion object {
