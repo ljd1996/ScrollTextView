@@ -7,7 +7,7 @@ import android.util.TypedValue
  * @Author: 苍耳叔叔
  * @Date: 2021/8/10
  */
-object SizeUtils {
+object SizeUtil {
     fun dp2px(context: Context, dpVal: Float): Float {
         return TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,

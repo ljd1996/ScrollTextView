@@ -3,7 +3,7 @@ package com.hearing.scrolltextview.test
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.hearing.scrolltextview.R
-import com.hearing.scrolltextview.utils.SizeUtils
+import com.hearing.scrolltextview.utils.SizeUtil
 import kotlinx.android.synthetic.main.activity_test_view.scrollView
 
 /**
@@ -18,8 +18,8 @@ class TestViewActivity : AppCompatActivity() {
     }
 
     private fun testLinesView() {
-        val singleWidth = SizeUtils.dp2px(this, 20f)
-        val width = SizeUtils.dp2px(this, 320f)
+        val singleWidth = SizeUtil.dp2px(this, 20f)
+        val width = SizeUtil.dp2px(this, 320f)
         val count = (width / singleWidth).toInt()
         var start = -count
         var end = 0

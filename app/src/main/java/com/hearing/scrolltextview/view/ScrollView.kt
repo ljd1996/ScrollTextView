@@ -16,7 +16,7 @@ import androidx.annotation.ColorInt
 import androidx.core.view.ViewCompat
 import androidx.core.view.marginLeft
 import androidx.core.view.marginTop
-import com.hearing.scrolltextview.utils.SizeUtils
+import com.hearing.scrolltextview.utils.SizeUtil
 
 /**
  * @Author: 苍耳叔叔
@@ -36,18 +36,18 @@ class ScrollView @JvmOverloads constructor(
     private var offset: Float = 0f
     private var currentLine = 0
     private var isUserScroll = false
-    private var lineSpace = SizeUtils.dp2px(context, 15f)   // 向下行距，单位 dp
+    private var lineSpace = SizeUtil.dp2px(context, 15f)   // 向下行距，单位 dp
     var highLightCount = 1  // 默认高亮 1 行
     var highLightStart = 1  // 默认从第1行开始高亮
     var isSmoothness = true // 默认平滑滚动
 
     @ColorInt
     private var normalTextColor = Color.GRAY  // 正常颜色
-    private var normalTextSize = SizeUtils.sp2px(context, 20f) // 正常字体，单位 sp
+    private var normalTextSize = SizeUtil.sp2px(context, 20f) // 正常字体，单位 sp
 
     @ColorInt
     private var highLightTextColor = Color.RED  // 高亮颜色
-    private var highLightTextSize = SizeUtils.sp2px(context, 20f) // 高亮字体，单位 sp
+    private var highLightTextSize = SizeUtil.sp2px(context, 20f) // 高亮字体，单位 sp
 
     private val textPaint = TextPaint()
 
@@ -68,7 +68,7 @@ class ScrollView @JvmOverloads constructor(
     var repeatable: Boolean = false // 滚动到最后一行后是否回到第一行重新滚动
 
     var speedLine: Long = 800 // 按行滚动速度，单位 ms/行
-    var speedSmooth: Float = SizeUtils.dp2px(context, 45f) // 按像素滚动速度，单位 dp/s
+    var speedSmooth: Float = SizeUtil.dp2px(context, 45f) // 按像素滚动速度，单位 dp/s
 
     /**
      * 逐行滚动
@@ -139,7 +139,7 @@ class ScrollView @JvmOverloads constructor(
      * 单位 dp
      */
     fun setLineSpace(space: Int) {
-        lineSpace = SizeUtils.dp2px(context, space.toFloat())
+        lineSpace = SizeUtil.dp2px(context, space.toFloat())
     }
 
     /**
@@ -151,8 +151,8 @@ class ScrollView @JvmOverloads constructor(
     ) {
         this.normalTextColor = normalColor
         this.highLightTextColor = highLightColor
-        this.normalTextSize = SizeUtils.sp2px(context, normalSize.toFloat())
-        this.highLightTextSize = SizeUtils.sp2px(context, highLightSize.toFloat())
+        this.normalTextSize = SizeUtil.sp2px(context, normalSize.toFloat())
+        this.highLightTextSize = SizeUtil.sp2px(context, highLightSize.toFloat())
     }
 
     // ------------------------------------ public ------------------------------------

@@ -26,4 +26,11 @@
         android:onClick="toTextView"
         android:text="自定义TextView实现"
         tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:onClick="toFancyPanel"
+        android:text="跳转FancyPanel"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

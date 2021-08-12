@@ -11,7 +11,7 @@ import android.util.Log
 import android.util.TypedValue
 import android.view.MotionEvent
 import androidx.appcompat.widget.AppCompatTextView
-import com.hearing.scrolltextview.utils.SizeUtils
+import com.hearing.scrolltextview.utils.SizeUtil
 
 /**
  * @Author: 苍耳叔叔
@@ -41,10 +41,10 @@ class ScrollTextView @JvmOverloads constructor(
         private set
 
     // ------------------------------- 内部参数 -------------------------------
-    private var scrollSpeed = SizeUtils.dp2px(context, 45f) / FREQUENCY // speed default 45dp/s
+    private var scrollSpeed = SizeUtil.dp2px(context, 45f) / FREQUENCY // speed default 45dp/s
     private var refreshRate = (1000 / FREQUENCY).toLong() // 默认 16ms 刷新一次
-    private val textLineSpace = SizeUtils.dp2px(context, 10f) // 行间距
-    private val defaultTextSize = SizeUtils.dp2px(context, 20f) // 默认字体大小
+    private val textLineSpace = SizeUtil.dp2px(context, 10f) // 行间距
+    private val defaultTextSize = SizeUtil.dp2px(context, 20f) // 默认字体大小
     private var isUserScroll = false    // 是否在手动滚动
     private var isAutoScroll = false    // 是否在自动滚动
     private var offset = minTopOffset() // 偏移量
@@ -92,7 +92,7 @@ class ScrollTextView @JvmOverloads constructor(
      * 不要使用 setTextSize 设置字体大小。单位 [size] dp
      */
     fun setContentSize(size: Int) {
-        val pxSize = SizeUtils.dp2px(context, size.toFloat())
+        val pxSize = SizeUtil.dp2px(context, size.toFloat())
         setLineSpacing(textLineSpace + pxSize, 0f)
         setTextSize(TypedValue.COMPLEX_UNIT_PX, pxSize)
         post {
@@ -104,7 +104,7 @@ class ScrollTextView @JvmOverloads constructor(
      * 设置滚动速度，单位 [speed] dp/s
      */
     fun setSpeed(speed: Float) {
-        this.scrollSpeed = SizeUtils.dp2px(context, speed) / FREQUENCY
+        this.scrollSpeed = SizeUtil.dp2px(context, speed) / FREQUENCY
         if (this.scrollSpeed < 1) {
             this.refreshRate = (1000 / (0.5 * FREQUENCY * this.scrollSpeed)).toLong()
             this.scrollSpeed = 1f

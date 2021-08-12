@@ -1,9 +1,10 @@
 package com.hearing.scrolltextview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.hearing.scrolltextview.test.TestFancyActivity
 import com.hearing.scrolltextview.test.TestRecyclerActivity
 import com.hearing.scrolltextview.test.TestTextViewActivity
 import com.hearing.scrolltextview.test.TestViewActivity
@@ -24,5 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     fun toTextView(view: View) {
         startActivity(Intent(this, TestTextViewActivity::class.java))
+    }
+
+    fun toFancyPanel(view: View) {
+        startActivity(Intent(this, TestFancyActivity::class.java))
     }
 }
