@@ -14,7 +14,7 @@
 | --- | --- |
 | <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e5a36b060634f64b04eb2148ea421c8~tplv-k3u1fbpfcp-zoom-1.image" height="300" ></div> |<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a8c0e1af48ff4df485c948dce7518672~tplv-k3u1fbpfcp-zoom-1.image" height="300" ></div>  |
 
-相关文章见: [有意思的自定义View | 高亮滚动文本](https://juejin.cn/post/6995015426996437006/)
+相关文章见: [有意思的自定义View | 高亮滚动文本](https://juejin.cn/post/6995026905137152036/)
 
 ## 手指平移缩放旋转
 
