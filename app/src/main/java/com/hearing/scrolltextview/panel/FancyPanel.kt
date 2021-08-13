@@ -305,6 +305,7 @@ class FancyPanel @JvmOverloads constructor(
             }
             MotionEvent.ACTION_UP -> {
                 isLittleDrag = false
+                correctPivot(isLittlePanelInLeft())
                 adjustPanelAttach(isLittlePanelInLeft())
                 // click
                 if (moveDistance <= SizeUtil.dp2px(context, 2f)) {

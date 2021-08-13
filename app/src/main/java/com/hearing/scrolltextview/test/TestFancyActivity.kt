@@ -2,6 +2,7 @@ package com.hearing.scrolltextview.test
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.hearing.scrolltextview.R
 import com.hearing.scrolltextview.panel.FancyPanel
@@ -30,6 +31,9 @@ class TestFancyActivity : AppCompatActivity() {
             fancyPanel?.addToActivity(this)
             fancyPanel?.setPanelContent(TEXT)
             fancyPanel?.onResume()
+        }
+        container.setOnClickListener {
+            Toast.makeText(this, "Click container!", Toast.LENGTH_SHORT).show()
         }
     }
 
